@@ -7,7 +7,7 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/zmxv/bitmexgo/optional"
+	"github.com/aiviaio/bitmexgo/optional"
 )
 
 // Linger please

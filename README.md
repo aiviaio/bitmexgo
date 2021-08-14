@@ -19,13 +19,13 @@ This package also differs from an alternative library at https://github.com/qct/
 
 ## Installation
 ```bash
-go get github.com/zmxv/bitmexgo
+go get github.com/aiviaio/bitmexgo
 ```
 
 ## Usage
 
 ```golang
-import "github.com/zmxv/bitmexgo"
+import "github.com/aiviaio/bitmexgo"
 
 // Get your API key/secret pair at https://www.bitmex.com/app/apiKeys
 apiKey := "..."
