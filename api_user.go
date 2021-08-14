@@ -1139,6 +1139,8 @@ UserApiService Get a history of all of your wallet transactions (deposits, withd
 
 type UserGetWalletHistoryOpts struct {
 	Currency optional.String
+	Count    optional.String
+	Start    optional.String
 }
 
 func (a *UserApiService) UserGetWalletHistory(ctx context.Context, localVarOptionals *UserGetWalletHistoryOpts) ([]Transaction, *http.Response, error) {
@@ -1160,6 +1162,15 @@ func (a *UserApiService) UserGetWalletHistory(ctx context.Context, localVarOptio
 	if localVarOptionals != nil && localVarOptionals.Currency.IsSet() {
 		localVarQueryParams.Add("currency", parameterToString(localVarOptionals.Currency.Value(), ""))
 	}
+
+	if localVarOptionals != nil && localVarOptionals.Count.IsSet() {
+		localVarQueryParams.Add("count", parameterToString(localVarOptionals.Count.Value(), ""))
+	}
+
+	if localVarOptionals != nil && localVarOptionals.Start.IsSet() {
+		localVarQueryParams.Add("start", parameterToString(localVarOptionals.Start.Value(), ""))
+	}
+
 	// to determine the Content-Type header
 	localVarHttpContentTypes := []string{"application/json", "application/x-www-form-urlencoded"}
 
