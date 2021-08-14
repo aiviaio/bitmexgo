@@ -11,6 +11,8 @@ type Transaction struct {
 	TransactType   string    `json:"transactType,omitempty"`
 	Amount         int       `json:"amount,omitempty"`
 	Fee            int       `json:"fee,omitempty"`
+	WalletBalance  int       `json:"walletBalance,omitempty"`
+	MarginBalance  int       `json:"marginBalance,omitempty"`
 	TransactStatus string    `json:"transactStatus,omitempty"`
 	Address        string    `json:"address,omitempty"`
 	Tx             string    `json:"tx,omitempty"`
